@@ -14,5 +14,5 @@ public interface ResultSetHandler<T> {
      * @return
      * @throws SQLException
      */
-     T handle(ResultSet rs) throws SQLException;
+     T handle(ResultSet rs) throws SQLException, InstantiationException, IllegalAccessException;
 }

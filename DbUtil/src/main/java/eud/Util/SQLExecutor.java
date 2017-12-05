@@ -59,7 +59,14 @@ public class SQLExecutor {
         PreparedStatement ps=connection.prepareStatement(sql);
         setParams(args,ps);
         ResultSet rs=ps.executeQuery();
-        T t=handler.handle(rs);
+        T t= null;
+        try {
+            t = handler.handle(rs);
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
         return t;
     }
 

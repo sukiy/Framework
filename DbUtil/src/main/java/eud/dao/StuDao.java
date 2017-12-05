@@ -7,6 +7,7 @@ import eud.Util.ResultSetHandler;
 import eud.Util.SQLExecutor;
 import eud.entity.Stu;
 
+import java.sql.Connection;
 import java.sql.SQLException;
 
 /**
@@ -15,6 +16,7 @@ import java.sql.SQLException;
 public class StuDao {
 
 
+    //添加学生信息
     public int addStu(Stu stu){
         int row=0;
         String sql="insert into Stu(s_name,s_sex) values(?,?)";
@@ -30,6 +32,7 @@ public class StuDao {
         return row;
     }
 
+    //根据id查询学生信息
     public Stu findStuById(int id){
         String sql="select * from tb_stu where s_no=?";
         Stu stu=null;
@@ -44,17 +47,14 @@ public class StuDao {
         return stu;
     }
 
-    public static void main(String[] args) {
-        /*Users user = new Users();
-        user.setAccount("bl5657");
-        user.setNickName("mmp");
-        user.setPassWord("123");
-        int row = new UserDao().save(user);
-        System.out.println(row);*/
 
+    public static void main(String[] args) {
+        /*
+        根据id查询单条记录
         Stu stu=new StuDao().findStuById(1);
-        System.out.println(stu.getSname());
-        System.out.println(stu.getSex());
+        System.out.println(stu.getSname()+","+stu.getSex());*/
+
+
     }
 
 }

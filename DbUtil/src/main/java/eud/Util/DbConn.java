@@ -1,5 +1,7 @@
 package eud.Util;
 
+import eud.entity.Stu;
+
 import java.sql.*;
 
 /**
@@ -60,7 +62,9 @@ public class DbConn {
 
     }
 
-    public static void main(String[] args) {
-        System.out.println(getConnection());
+    public static void main(String[] args) throws SQLException {
+        Connection conn=DbConn.getConnection();
+        System.out.println(conn.getAutoCommit());
+
     }
 }
