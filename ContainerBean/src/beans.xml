@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans>
+    <!-- bean可以是任意的对象，id是为这个对象在容器中的唯一标识
+         class属性指定对象的完整类名
+         scope表示对象的创建形式，单例还是原型,默认是单例-->
+    <bean id="miPhone" class="factory.MiPhone" scope="singleton"/>
+    <bean id="oppoPhone" class="factory.OppoPhone" scope="prototype"/>
+    <bean id="miPad" class="factory.MiPad" scope="prototype"/>
+    <bean id="oppoPad" class="factory.OppoPad"/>
+</beans>
