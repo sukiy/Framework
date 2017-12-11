@@ -18,7 +18,8 @@ public class StuService implements IStuService {
         this.stuDao = stuDao;
     }
 
-    public void addStu(Stu stu) {
-        stuDao.addStu(stu);
+    public boolean addStu() {
+        stuDao.addStu();
+        return true;
     }
 }

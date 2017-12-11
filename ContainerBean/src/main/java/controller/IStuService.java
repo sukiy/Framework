@@ -7,5 +7,5 @@ import entity.Stu;
  */
 public interface IStuService {
 
-    public void addStu(Stu stu);
+    public boolean addStu();
 }

@@ -7,5 +7,5 @@ import entity.Stu;
  */
 public interface IStuDao {
 
-    public void addStu(Stu stu);
+    public void addStu();
 }

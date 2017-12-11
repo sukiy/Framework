@@ -12,6 +12,11 @@ public class Stu {
     private int sno;
     private String sname;
 
+    public Stu(int sno, String sname) {
+        this.sno = sno;
+        this.sname = sname;
+    }
+
     public int getSno() {
         return sno;
     }
