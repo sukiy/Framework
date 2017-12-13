@@ -1,8 +1,6 @@
 package handler;
 
-import edu.nf.beans.BeanFactory;
-import edu.nf.beans.InjectHandler;
-import edu.nf.beans.annotations.Inject;
+import annotation.Inject;
 import factory.BeanFactory;
 
 import java.beans.BeanInfo;
